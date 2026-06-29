@@ -65,7 +65,7 @@ export default function LoginPage() {
     setError('');
     setLoading(true);
     try {
-      const res = await fetch('/api/create-free-member', {
+      const res = await fetch('/api/auth/create-free-member', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, companyName, phone, address, license, website, logoUrl }),
